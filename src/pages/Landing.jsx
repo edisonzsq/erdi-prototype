@@ -18,7 +18,7 @@ export default function Landing() {
           >
             Data Explorer
           </a>
-          <Link to="/login" className="btn btn-secondary btn-hero">
+          <Link to="/login" target="_blank" className="btn btn-secondary btn-hero">
             Login to Workspace
           </Link>
         </div>
@@ -68,14 +68,48 @@ export default function Landing() {
         </a>
       </section>
 
-      <section className="workspace-teaser">
+      <section className="workspace-intro">
         <h2>Workspace for Researchers</h2>
-        <p>
-          Log in to access your personal workspace: create spaces, generate and save datasets with AI assistance, and invite colleagues for collaborative analysis.
+        <p className="section-lead">
+          Log in to access your personal workspace: create spaces, generate and save datasets with AI assistance, and collaborate with colleagues.
         </p>
-        <Link to="/login" className="btn btn-primary">
-          Login to Workspace
-        </Link>
+        <div className="workspace-feature-cards">
+          <div className="workspace-feature-card">
+            <span className="workspace-feature-icon">📡</span>
+            <h3>StatSuite Data</h3>
+            <p>Pull trusted macro and socioeconomic data directly from the StatSuite API into your workspace.</p>
+          </div>
+          <div className="workspace-feature-card">
+            <span className="workspace-feature-icon">📤</span>
+            <h3>Custom Data & AI</h3>
+            <p>Upload your own datasets and ask AI to analyze them alongside StatSuite data.</p>
+          </div>
+          <div className="workspace-feature-card">
+            <span className="workspace-feature-icon">📁</span>
+            <h3>Save to Spaces</h3>
+            <p>Store AI-produced datasets and analyses in organized spaces for easy access.</p>
+          </div>
+          <div className="workspace-feature-card">
+            <span className="workspace-feature-icon">🤝</span>
+            <h3>Collaborative Spaces</h3>
+            <p>Invite colleagues to your space to turn it into a shared, collaborative workspace.</p>
+          </div>
+          <div className="workspace-feature-card">
+            <span className="workspace-feature-icon">🔔</span>
+            <h3>Follow & Alerts</h3>
+            <p>Follow collaboration spaces and receive email alerts when new updates are saved.</p>
+          </div>
+          <div className="workspace-feature-card">
+            <span className="workspace-feature-icon">🔍</span>
+            <h3>Data Quality Checks</h3>
+            <p>Schedule automated nightly scans to detect anomalies and data gaps in your datasets.</p>
+          </div>
+        </div>
+        <div className="workspace-cta">
+          <Link to="/login" target="_blank" className="btn btn-primary">
+            Login to Workspace
+          </Link>
+        </div>
       </section>
     </div>
   );

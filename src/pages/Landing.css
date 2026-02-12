@@ -50,7 +50,7 @@
 
 .indicators-intro h2,
 .indicators-cta h2,
-.workspace-teaser h2 {
+.workspace-intro h2 {
   font-size: 1.5rem;
   margin-bottom: 0.75rem;
 }
@@ -111,19 +111,72 @@
   margin-bottom: 1rem;
 }
 
-.workspace-teaser {
-  text-align: center;
-  padding: 2rem;
-  border: 1px dashed var(--adb-blue-lighter);
-  border-radius: 12px;
+/* Workspace for Researchers - vertical rectangular feature cards */
+.workspace-intro {
+  margin-bottom: 3rem;
 }
 
-.workspace-teaser p {
+.workspace-intro .section-lead {
+  margin-bottom: 2rem;
+}
+
+.workspace-feature-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.workspace-feature-card {
+  background: var(--adb-white);
+  border: 1px solid var(--adb-border);
+  border-radius: 10px;
+  padding: 1.25rem;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.workspace-feature-card:hover {
+  border-color: var(--adb-blue-lighter);
+  box-shadow: 0 4px 16px rgba(0, 37, 105, 0.1);
+}
+
+.workspace-feature-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.workspace-feature-card h3 {
+  font-size: 1.05rem;
+  margin: 0 0 0.5rem;
+  color: var(--adb-blue);
+}
+
+.workspace-feature-card p {
+  margin: 0;
+  font-size: 0.9rem;
   color: var(--adb-text-muted);
-  margin-bottom: 1.25rem;
-  max-width: 560px;
-  margin-left: auto;
-  margin-right: auto;
+  line-height: 1.55;
+  flex: 1;
+}
+
+.workspace-cta {
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .workspace-feature-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .workspace-feature-cards {
+    grid-template-columns: 1fr;
+  }
 }
 
 .btn {

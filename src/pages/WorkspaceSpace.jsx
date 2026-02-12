@@ -15,6 +15,8 @@ export default function WorkspaceSpace() {
   const [showInvite, setShowInvite] = useState(false);
   const [inviteEmail, setInviteEmail] = useState('');
   const [showShare, setShowShare] = useState(null);
+  const [showFollow, setShowFollow] = useState(null);
+  const [followPrefs, setFollowPrefs] = useState({}); // dsId -> 'immediate' | 'daily' | 'weekly'
 
   if (!currentSpace) {
     const first = spaces[0];
@@ -56,6 +58,11 @@ export default function WorkspaceSpace() {
       )
     );
     setShowShare(null);
+  };
+
+  const handleFollowDataset = (dsId, pref) => {
+    setFollowPrefs((prev) => ({ ...prev, [dsId]: pref }));
+    setShowFollow(null);
   };
 
   return (
@@ -101,6 +108,41 @@ export default function WorkspaceSpace() {
         </div>
       )}
 
+      {showFollow && (
+        <div className="modal-overlay" onClick={() => setShowFollow(null)}>
+          <div className="modal" onClick={(e) => e.stopPropagation()}>
+            <h3>Follow &quot;{showFollow.name}&quot;</h3>
+            <p className="modal-desc">How would you like to be notified when this dataset changes?</p>
+            <div className="follow-options">
+              <button
+                type="button"
+                className="follow-option-btn"
+                onClick={() => handleFollowDataset(showFollow.id, 'immediate')}
+              >
+                Immediately when there is a dataset change
+              </button>
+              <button
+                type="button"
+                className="follow-option-btn"
+                onClick={() => handleFollowDataset(showFollow.id, 'daily')}
+              >
+                Once a day (end of day)
+              </button>
+              <button
+                type="button"
+                className="follow-option-btn"
+                onClick={() => handleFollowDataset(showFollow.id, 'weekly')}
+              >
+                Once a week
+              </button>
+            </div>
+            <div className="modal-actions">
+              <button type="button" className="btn btn-secondary" onClick={() => setShowFollow(null)}>Cancel</button>
+            </div>
+          </div>
+        </div>
+      )}
+
       <section className="datasets-section">
         <h2>Datasets</h2>
         <p className="section-hint">Use the AI Assistant on the right to generate new datasets, then save them here. You can share any dataset with other users.</p>
@@ -136,6 +178,13 @@ export default function WorkspaceSpace() {
                       Add recipient
                     </button>
                   )}
+                  <button
+                    type="button"
+                    className={`btn-link ${followPrefs[ds.id] ? 'is-following' : ''}`}
+                    onClick={() => setShowFollow(ds)}
+                  >
+                    {followPrefs[ds.id] ? `Follow (${followPrefs[ds.id]})` : 'Follow'}
+                  </button>
                 </div>
               </li>
             ))}
