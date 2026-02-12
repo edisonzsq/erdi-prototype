@@ -1,0 +1,50 @@
+.publication-detail {
+  max-width: 680px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.article-category {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--adb-blue);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.publication-detail h1 {
+  font-size: 1.75rem;
+  margin: 0 0 0.5rem;
+}
+
+.article-date {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--adb-text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.article-body p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  color: var(--adb-text);
+}
+
+.dataset-note {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: var(--adb-bg);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: var(--adb-text-muted);
+}
+
+.dataset-note strong {
+  color: var(--adb-blue);
+}

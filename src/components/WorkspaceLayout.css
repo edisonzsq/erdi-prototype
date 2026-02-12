@@ -1,0 +1,97 @@
+.workspace-layout {
+  display: flex;
+  min-height: 100vh;
+  background: var(--adb-bg);
+}
+
+.workspace-sidebar {
+  width: 260px;
+  min-width: 220px;
+  background: var(--adb-white);
+  border-right: 1px solid var(--adb-border);
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-header {
+  padding: 1.25rem;
+  border-bottom: 1px solid var(--adb-border);
+}
+
+.sidebar-header h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1.1rem;
+}
+
+.btn-create-space {
+  width: 100%;
+  padding: 0.5em;
+  font-size: 0.9rem;
+  background: var(--adb-blue);
+  color: var(--adb-white);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-create-space:hover {
+  background: var(--adb-blue-light);
+}
+
+.space-list {
+  flex: 1;
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.space-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.15s;
+}
+
+.space-item:hover {
+  background: var(--adb-bg);
+}
+
+.space-item.active {
+  background: var(--adb-blue-pale);
+  color: var(--adb-blue);
+}
+
+.space-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.space-badge {
+  font-size: 0.7rem;
+  background: var(--adb-blue);
+  color: var(--adb-white);
+  padding: 0.15em 0.5em;
+  border-radius: 4px;
+  margin-top: 0.25rem;
+}
+
+.space-members {
+  font-size: 0.8rem;
+  color: var(--adb-text-muted);
+  margin-top: 0.2rem;
+}
+
+.workspace-content {
+  flex: 1;
+  overflow: auto;
+  min-width: 0;
+}

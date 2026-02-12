@@ -1,0 +1,128 @@
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.site-header {
+  background: var(--adb-blue);
+  color: var(--adb-white);
+  box-shadow: 0 2px 8px rgba(0, 37, 105, 0.15);
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 56px;
+}
+
+.logo {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  color: var(--adb-white);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.logo:hover {
+  color: var(--adb-blue-pale);
+  text-decoration: none;
+}
+
+.logo-adb {
+  font-size: 1.25rem;
+  letter-spacing: 0.05em;
+}
+
+.logo-erdi {
+  font-size: 0.95rem;
+  font-weight: 600;
+  opacity: 0.95;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.main-nav a {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.35em 0;
+}
+
+.main-nav a:hover {
+  color: var(--adb-white);
+  text-decoration: none;
+}
+
+.main-nav a.active {
+  color: var(--adb-white);
+  border-bottom: 2px solid var(--adb-white);
+}
+
+.user-menu {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-left: 0.5rem;
+  padding-left: 1rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.user-name {
+  font-size: 0.875rem;
+  opacity: 0.9;
+}
+
+.btn-logout {
+  background: transparent;
+  color: var(--adb-white);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 0.35em 0.75em;
+  font-size: 0.875rem;
+}
+
+.btn-logout:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: var(--adb-white);
+}
+
+.main {
+  flex: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 2rem 1.5rem;
+}
+
+.workspace-main {
+  max-width: none;
+  padding: 0;
+}
+
+.site-footer {
+  background: var(--adb-blue);
+  color: var(--adb-white);
+  margin-top: auto;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.25rem 1.5rem;
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 0;
+  font-size: 0.875rem;
+  opacity: 0.9;
+}

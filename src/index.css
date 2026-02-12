@@ -1,0 +1,77 @@
+/* ERDI Data Portal - ADB theme */
+:root {
+  --adb-blue: #002569;
+  --adb-blue-light: #405C8F;
+  --adb-blue-lighter: #8092B4;
+  --adb-blue-pale: #C0C9DA;
+  --adb-white: #FFFFFF;
+  --adb-text: #1a1a1a;
+  --adb-text-muted: #555;
+  --adb-border: #e0e4e8;
+  --adb-bg: #f5f7fa;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--adb-text);
+  background-color: var(--adb-white);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+a {
+  color: var(--adb-blue);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  border-radius: 6px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.btn-primary {
+  background-color: var(--adb-blue);
+  color: var(--adb-white);
+  border-color: var(--adb-blue);
+}
+
+.btn-primary:hover {
+  background-color: var(--adb-blue-light);
+  border-color: var(--adb-blue-light);
+}
+
+.btn-secondary {
+  background-color: var(--adb-white);
+  color: var(--adb-blue);
+  border: 2px solid var(--adb-blue);
+}
+
+.btn-secondary:hover {
+  background-color: var(--adb-blue-pale);
+}
+
+h1, h2, h3 {
+  color: var(--adb-blue);
+  font-weight: 600;
+}

@@ -1,0 +1,22 @@
+.about-us {
+  max-width: 680px;
+}
+
+.about-us h1 {
+  margin-bottom: 1.5rem;
+}
+
+.about-us section {
+  margin-bottom: 2rem;
+}
+
+.about-us h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.about-us p {
+  color: var(--adb-text);
+  line-height: 1.6;
+  margin: 0;
+}
