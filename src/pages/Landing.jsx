@@ -49,6 +49,64 @@ export default function Landing() {
         </div>
       </section>
 
+      <section className="data-insights">
+        <div className="data-insights-header">
+          <h2>Data insights</h2>
+          <Link to="/dashboard" className="data-insights-explore">Explore all data insights →</Link>
+        </div>
+        <div className="data-insights-content">
+          <div className="data-insights-chart">
+            <h3>Contribution to year-on-year CPI inflation in selected economies</h3>
+            <p className="chart-subtitle">Percentage points, December 2025</p>
+            <div className="chart-legend">
+              <span className="legend-item"><span className="legend-swatch legend-energy" /> Energy</span>
+              <span className="legend-item"><span className="legend-swatch legend-food" /> Food</span>
+              <span className="legend-item"><span className="legend-swatch legend-core" /> All items less food and energy</span>
+            </div>
+            <div className="stacked-bar-chart">
+              {[
+                { country: 'Philippines', energy: -0.2, food: 0.8, core: 2.6 },
+                { country: 'Vietnam', energy: -0.1, food: 0.9, core: 2.0 },
+                { country: 'Indonesia', energy: 0.1, food: 1.2, core: 1.3 },
+                { country: 'Thailand', energy: -0.3, food: 0.6, core: 1.5 },
+                { country: 'India', energy: 0.2, food: 1.4, core: 2.5 },
+              ].map((d) => {
+                const total = d.energy + d.food + d.core;
+                const maxVal = 4.5;
+                const pct = (total / maxVal) * 100;
+                const energyPct = (Math.abs(d.energy) / total) * 100;
+                const foodPct = (d.food / total) * 100;
+                const corePct = (d.core / total) * 100;
+                return (
+                  <div key={d.country} className="chart-bar-row">
+                    <span className="chart-country">{d.country}</span>
+                    <div className="chart-bar-wrap">
+                      <div className="chart-bar-stack" style={{ width: `${Math.min(pct, 100)}%` }}>
+                        {d.energy < 0 && <div className="chart-segment chart-energy" style={{ width: `${energyPct}%` }} />}
+                        <div className="chart-segment chart-food" style={{ width: `${foodPct}%` }} />
+                        <div className="chart-segment chart-core" style={{ width: `${corePct}%` }} />
+                        {d.energy > 0 && <div className="chart-segment chart-energy" style={{ width: `${energyPct}%` }} />}
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+            <p className="chart-source">Source: ADB Key Indicators Database (CPI, HICPS).</p>
+          </div>
+          <div className="data-insights-text">
+            <h3>Year-on-year headline inflation in Asia and the Pacific was broadly stable in December 2025</h3>
+            <p>
+              Headline inflation across selected Asian economies, measured by CPI, was broadly stable in December 2025. Core inflation (all items less food and energy) remained the primary contributor to headline inflation in most economies, while energy prices in several countries contributed negatively following earlier price declines.
+            </p>
+            <p>
+              Food inflation moderated in some economies but remained elevated in others. In the Philippines, inflation eased within the central bank&apos;s target band. India and Indonesia saw mixed contributions from food and energy, with core inflation driving overall rates.
+            </p>
+            <Link to="/publications/intro-cpi-inflation" className="data-insights-cta">Read the statistical release →</Link>
+          </div>
+        </div>
+      </section>
+
       <section className="indicators-intro">
         <h2>Key Economic Indicators</h2>
         <p className="section-lead">
@@ -95,43 +153,17 @@ export default function Landing() {
 
       <section className="workspace-intro">
         <h2>Workspace for Researchers</h2>
-        <p className="section-lead">
-          Log in to access your personal workspace: create spaces, generate and save datasets with AI assistance, and collaborate with colleagues.
-        </p>
-        <div className="workspace-feature-cards">
-          <div className="workspace-feature-card">
-            <span className="workspace-feature-icon">📡</span>
-            <h3>StatSuite Data</h3>
-            <p>Pull trusted macro and socioeconomic data directly from the StatSuite API into your workspace.</p>
-          </div>
-          <div className="workspace-feature-card">
-            <span className="workspace-feature-icon">📤</span>
-            <h3>Custom Data & AI</h3>
-            <p>Upload your own datasets and ask AI to analyze them alongside StatSuite data.</p>
-          </div>
-          <div className="workspace-feature-card">
-            <span className="workspace-feature-icon">📁</span>
-            <h3>Save to Spaces</h3>
-            <p>Store AI-produced datasets and analyses in organized spaces for easy access.</p>
-          </div>
-          <div className="workspace-feature-card">
-            <span className="workspace-feature-icon">🤝</span>
-            <h3>Collaborative Spaces</h3>
-            <p>Invite colleagues to your space to turn it into a shared, collaborative workspace.</p>
-          </div>
-          <div className="workspace-feature-card">
-            <span className="workspace-feature-icon">🔔</span>
-            <h3>Follow & Alerts</h3>
-            <p>Follow collaboration spaces and receive email alerts when new updates are saved.</p>
-          </div>
-          <div className="workspace-feature-card">
-            <span className="workspace-feature-icon">🔍</span>
-            <h3>Data Quality Checks</h3>
-            <p>Schedule automated nightly scans to detect anomalies and data gaps in your datasets.</p>
-          </div>
+        <p className="section-lead">Log in to create spaces, save datasets with AI assistance, and collaborate with colleagues.</p>
+        <div className="workspace-features-row">
+          <div className="workspace-feature-item"><span className="workspace-feature-icon">📡</span> StatSuite Data</div>
+          <div className="workspace-feature-item"><span className="workspace-feature-icon">📤</span> Custom Data & AI</div>
+          <div className="workspace-feature-item"><span className="workspace-feature-icon">📁</span> Save to Spaces</div>
+          <div className="workspace-feature-item"><span className="workspace-feature-icon">🤝</span> Collaborative Spaces</div>
+          <div className="workspace-feature-item"><span className="workspace-feature-icon">🔔</span> Follow & Alerts</div>
+          <div className="workspace-feature-item"><span className="workspace-feature-icon">🔍</span> Data Quality Checks</div>
         </div>
         <div className="workspace-cta">
-          <Link to="/login" target="_blank" className="btn btn-primary">
+          <Link to="/login" className="btn btn-primary">
             Login to Workspace
           </Link>
         </div>

@@ -1,0 +1,62 @@
+.indicators-page {
+  max-width: 900px;
+}
+
+.indicators-page h1 {
+  margin-bottom: 0.5rem;
+}
+
+.indicators-intro {
+  color: var(--adb-text-muted);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.indicators-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.indicator-category-card {
+  background: var(--adb-white);
+  border: 1px solid var(--adb-border);
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-decoration: none;
+  color: inherit;
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.indicator-category-card:hover {
+  border-color: var(--adb-blue-lighter);
+  box-shadow: 0 4px 12px rgba(0, 37, 105, 0.08);
+  text-decoration: none;
+  color: inherit;
+}
+
+.indicator-category-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.indicator-category-card h3 {
+  font-size: 1.1rem;
+  margin: 0 0 0.5rem;
+  color: var(--adb-blue);
+}
+
+.indicator-category-card p {
+  font-size: 0.9rem;
+  color: var(--adb-text-muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.indicators-cta {
+  padding: 1.5rem;
+  background: var(--adb-bg);
+  border-radius: 10px;
+}

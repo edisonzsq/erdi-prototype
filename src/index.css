@@ -1,6 +1,7 @@
 /* ERDI Data Portal - ADB theme */
 :root {
   --adb-blue: #002569;
+  --adb-blue-hero: #1e4a7a;
   --adb-blue-light: #405C8F;
   --adb-blue-lighter: #8092B4;
   --adb-blue-pale: #C0C9DA;

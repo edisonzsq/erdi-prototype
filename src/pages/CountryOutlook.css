@@ -1,0 +1,81 @@
+.country-outlook {
+  max-width: 800px;
+}
+
+.country-outlook .back-link {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: var(--adb-blue);
+}
+
+.country-outlook h1 {
+  margin-bottom: 0.5rem;
+}
+
+.country-intro {
+  color: var(--adb-text-muted);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.outlook-section {
+  margin-bottom: 2rem;
+}
+
+.outlook-section h2 {
+  font-size: 1.2rem;
+  margin: 0 0 1rem;
+  color: var(--adb-blue);
+}
+
+.indicator-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.indicator-box {
+  background: var(--adb-bg);
+  border: 1px solid var(--adb-border);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.indicator-value {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--adb-blue);
+}
+
+.indicator-unit {
+  font-size: 0.9rem;
+  color: var(--adb-text-muted);
+}
+
+.indicator-label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+.indicator-sub {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--adb-text-muted);
+}
+
+.indicator-year {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--adb-text-muted);
+  margin-top: 0.25rem;
+}
+
+.outlook-section p {
+  color: var(--adb-text-muted);
+  line-height: 1.6;
+  margin: 0;
+}

@@ -1,0 +1,48 @@
+.countries-page {
+  max-width: 900px;
+}
+
+.countries-page h1 {
+  margin-bottom: 0.5rem;
+}
+
+.countries-intro {
+  color: var(--adb-text-muted);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.region-section {
+  margin-bottom: 2rem;
+}
+
+.region-section h2 {
+  font-size: 1.2rem;
+  margin: 0 0 1rem;
+  color: var(--adb-blue);
+}
+
+.country-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 0.75rem;
+}
+
+.country-card {
+  display: block;
+  padding: 0.75rem 1rem;
+  background: var(--adb-white);
+  border: 1px solid var(--adb-border);
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--adb-text);
+  font-weight: 500;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.country-card:hover {
+  border-color: var(--adb-blue-lighter);
+  background: var(--adb-bg);
+  text-decoration: none;
+  color: var(--adb-blue);
+}
