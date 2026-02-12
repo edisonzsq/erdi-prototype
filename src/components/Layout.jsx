@@ -23,6 +23,9 @@ export default function Layout() {
           </Link>
           <nav className="main-nav">
             <Link to="/" className={location.pathname === '/' ? 'active' : ''}>Home</Link>
+            <a href="https://adb-demo2.webflow.io/country-outlook/philippines" target="_blank" rel="noopener noreferrer">Indicators</a>
+            <Link to="/dashboard" className={location.pathname === '/dashboard' ? 'active' : ''}>Dashboard</Link>
+            <a href="https://adb-demo2.webflow.io/country-outlook/philippines" target="_blank" rel="noopener noreferrer">Countries</a>
             <Link to="/publications" className={location.pathname === '/publications' ? 'active' : ''}>Publications</Link>
             <Link to="/about" className={location.pathname === '/about' ? 'active' : ''}>About Us</Link>
             {user && (

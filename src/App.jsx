@@ -6,6 +6,7 @@ import Landing from './pages/Landing';
 import Publications from './pages/Publications';
 import PublicationDetail from './pages/PublicationDetail';
 import AboutUs from './pages/AboutUs';
+import Dashboard from './pages/Dashboard';
 import Login from './pages/Login';
 import WorkspaceSpace from './pages/WorkspaceSpace';
 import './App.css';
@@ -29,6 +30,7 @@ export default function App() {
             <Route index element={<Landing />} />
             <Route path="publications" element={<Publications />} />
             <Route path="publications/:slug" element={<PublicationDetail />} />
+            <Route path="dashboard" element={<Dashboard />} />
             <Route path="about" element={<AboutUs />} />
             <Route path="login" element={<Login />} />
             <Route

@@ -56,7 +56,58 @@
   margin: 0 0 0.5rem;
 }
 
+.publications-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: var(--adb-bg);
+  border-radius: 8px;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.filter-group label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--adb-text-muted);
+}
+
+.filter-group select,
+.filter-group input {
+  padding: 0.4em 0.6em;
+  border: 1px solid var(--adb-border);
+  border-radius: 6px;
+  font-size: 0.9rem;
+  min-width: 140px;
+}
+
+.publications-count {
+  font-size: 0.9rem;
+  color: var(--adb-text-muted);
+  margin-bottom: 1rem;
+}
+
+.article-meta {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
 .article-date {
   font-size: 0.875rem;
   color: var(--adb-text-muted);
+}
+
+.article-economy {
+  font-size: 0.8rem;
+  color: var(--adb-blue);
+  background: var(--adb-blue-pale);
+  padding: 0.15em 0.5em;
+  border-radius: 4px;
 }

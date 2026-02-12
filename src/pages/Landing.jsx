@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { getFeaturedPublications } from '../data/publications';
 import './Landing.css';
 
 export default function Landing() {
@@ -22,6 +23,26 @@ export default function Landing() {
             Login to Workspace
           </Link>
         </div>
+      </section>
+
+      <section className="featured-publications">
+        <h2>Featured Publications</h2>
+        <p className="section-lead">
+          Latest reports and analysis on economic indicators, country outlooks, and policy developments.
+        </p>
+        <div className="featured-cards">
+          {getFeaturedPublications(3).map((pub) => (
+            <Link key={pub.id} to={`/publications/${pub.slug}`} className="featured-card">
+              <span className="featured-category">{pub.category}</span>
+              <h3>{pub.title}</h3>
+              <p>{pub.excerpt}</p>
+              <span className="featured-date">{new Date(pub.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
+            </Link>
+          ))}
+        </div>
+        <Link to="/publications" className="btn btn-secondary featured-more">
+          View all publications →
+        </Link>
       </section>
 
       <section className="indicators-intro">
