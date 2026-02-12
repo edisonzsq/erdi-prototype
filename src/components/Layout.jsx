@@ -28,14 +28,30 @@ export default function Layout() {
             <a href="https://adb-demo2.webflow.io/country-outlook/philippines" target="_blank" rel="noopener noreferrer">Countries</a>
             <Link to="/publications" className={location.pathname === '/publications' ? 'active' : ''}>Publications</Link>
             <Link to="/about" className={location.pathname === '/about' ? 'active' : ''}>About Us</Link>
+            <span className="nav-cta">
+              <a
+                href="https://de.statsuite.dev.adb-aibd.tech/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="nav-cta-btn"
+              >
+                Data Explorer
+              </a>
+              {user ? (
+                <Link to="/workspace" className={`nav-cta-btn nav-cta-primary ${location.pathname.startsWith('/workspace') ? 'active' : ''}`}>
+                  Workspace
+                </Link>
+              ) : (
+                <Link to="/login" className="nav-cta-btn nav-cta-primary">
+                  Login to Workspace
+                </Link>
+              )}
+            </span>
             {user && (
-              <>
-                <Link to="/workspace" className={location.pathname.startsWith('/workspace') ? 'active' : ''}>Workspace</Link>
-                <span className="user-menu">
-                  <span className="user-name">{user.email}</span>
-                  <button type="button" className="btn-logout" onClick={handleLogout}>Log out</button>
-                </span>
-              </>
+              <span className="user-menu">
+                <span className="user-name">{user.email}</span>
+                <button type="button" className="btn-logout" onClick={handleLogout}>Log out</button>
+              </span>
             )}
           </nav>
         </div>
