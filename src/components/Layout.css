@@ -8,6 +8,7 @@
 
 .site-header {
   position: relative;
+  z-index: 100;
   background: var(--adb-blue);
   color: var(--adb-white);
   box-shadow: 0 2px 8px rgba(0, 37, 105, 0.15);
