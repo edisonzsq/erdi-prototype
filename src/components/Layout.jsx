@@ -38,12 +38,6 @@ export default function Layout() {
             <span className="nav-toggle-bar" />
           </button>
           <nav className={`main-nav ${menuOpen ? 'nav-open' : ''}`}>
-            <Link to="/" className={location.pathname === '/' ? 'active' : ''} onClick={closeMenu}>Home</Link>
-            <Link to="/indicators" className={location.pathname === '/indicators' ? 'active' : ''} onClick={closeMenu}>Indicators</Link>
-            <Link to="/dashboard" className={location.pathname === '/dashboard' ? 'active' : ''} onClick={closeMenu}>Dashboard</Link>
-            <Link to="/countries" className={location.pathname.startsWith('/countries') ? 'active' : ''} onClick={closeMenu}>Countries</Link>
-            <Link to="/publications" className={location.pathname === '/publications' ? 'active' : ''} onClick={closeMenu}>Publications</Link>
-            <Link to="/about" className={location.pathname === '/about' ? 'active' : ''} onClick={closeMenu}>About Us</Link>
             <span className="nav-cta">
               <a
                 href="https://de.statsuite.dev.adb-aibd.tech/"
@@ -53,7 +47,15 @@ export default function Layout() {
                 onClick={closeMenu}
               >
                 Data Explorer
-              </a>
+              </a>              
+            </span>
+            <Link to="/" className={location.pathname === '/' ? 'active' : ''} onClick={closeMenu}>Home</Link>
+            <Link to="/indicators" className={location.pathname === '/indicators' ? 'active' : ''} onClick={closeMenu}>Indicators</Link>
+            <Link to="/dashboard" className={location.pathname === '/dashboard' ? 'active' : ''} onClick={closeMenu}>Dashboard</Link>
+            <Link to="/countries" className={location.pathname.startsWith('/countries') ? 'active' : ''} onClick={closeMenu}>Countries</Link>
+            <Link to="/publications" className={location.pathname === '/publications' ? 'active' : ''} onClick={closeMenu}>Publications</Link>
+            <Link to="/about" className={location.pathname === '/about' ? 'active' : ''} onClick={closeMenu}>About Us</Link>
+            <span className="nav-cta">
               {user ? (
                 <Link to="/workspace" className={`nav-cta-btn nav-cta-primary ${location.pathname.startsWith('/workspace') ? 'active' : ''}`} onClick={closeMenu}>
                   Workspace

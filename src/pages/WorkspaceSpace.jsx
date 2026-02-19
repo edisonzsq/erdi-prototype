@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useOutletContext, useParams, useNavigate } from 'react-router-dom';
 import './WorkspaceSpace.css';
 
@@ -17,6 +17,16 @@ export default function WorkspaceSpace() {
   const [showShare, setShowShare] = useState(null);
   const [showFollow, setShowFollow] = useState(null);
   const [followPrefs, setFollowPrefs] = useState({}); // dsId -> 'immediate' | 'daily' | 'weekly'
+
+
+  /*
+    Detect mobile device and prompt user that this is a heavy desktop app and not optimized for mobile.
+  */
+  useEffect(() => {
+    if (window.innerWidth < 768) {
+      alert('This is a heavy desktop app and not optimized for mobile. Please use a desktop computer for the best experience.');
+    }
+  }, []);
 
   if (!currentSpace) {
     const first = spaces[0];
