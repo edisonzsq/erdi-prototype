@@ -64,7 +64,13 @@ export default function Layout() {
             </Link>
             <Link to="/indicators" className={location.pathname === '/indicators' ? 'active' : ''} onClick={closeMenu}>Data</Link>
             <Link to="/publications" className={location.pathname === '/publications' ? 'active' : ''} onClick={closeMenu}>Publications</Link>
-            <Link to="/about" className={location.pathname === '/about' ? 'active' : ''} onClick={closeMenu}>About Us</Link>         
+            <Link
+              to="/people"
+              className={location.pathname === '/people' ? 'active' : ''}
+              onClick={closeMenu}
+            >
+              People
+            </Link>         
             <span className="nav-cta">
               <a
                 href="https://de.statsuite.dev.adb-aibd.tech/"

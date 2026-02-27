@@ -5,7 +5,6 @@ import WorkspaceLayout from './components/WorkspaceLayout';
 import Landing from './pages/Landing';
 import Publications from './pages/Publications';
 import PublicationDetail from './pages/PublicationDetail';
-import AboutUs from './pages/AboutUs';
 // import Dashboard from './pages/Dashboard';
 import Indicators from './pages/Indicators';
 // import Countries from './pages/Countries';
@@ -15,6 +14,7 @@ import WorkspaceSpace from './pages/WorkspaceSpace';
 import KnowledgeProducts from './pages/KnowledgeProducts';
 import KnowledgeEvents from './pages/KnowledgeEvents';
 import WorkWithUs from './pages/WorkWithUs';
+import People from './pages/People';
 import './App.css';
 
 function ProtectedWorkspace({ children }) {
@@ -43,7 +43,7 @@ export default function App() {
             <Route path="knowledge-products" element={<KnowledgeProducts />} />
             <Route path="knowledge-events" element={<KnowledgeEvents />} />
             <Route path="work-with-us" element={<WorkWithUs />} />
-            <Route path="about" element={<AboutUs />} />
+            <Route path="people" element={<People />} />
             <Route path="login" element={<Login />} />
             <Route
               path="workspace"

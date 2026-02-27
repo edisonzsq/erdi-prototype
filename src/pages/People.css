@@ -1,0 +1,93 @@
+.people-page {
+  max-width: 880px;
+}
+
+.people-header {
+  margin-bottom: 1.5rem;
+}
+
+.people-header h1 {
+  margin-bottom: 0.75rem;
+}
+
+.people-header p {
+  color: var(--adb-text);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.people-alpha-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.75rem 0;
+  margin-bottom: 1.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.people-alpha-link {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--adb-link, #0056b3);
+  padding: 0.1rem 0.35rem;
+  border-radius: 999px;
+}
+
+.people-alpha-link:hover {
+  background-color: rgba(0, 86, 179, 0.08);
+}
+
+.people-list {
+  margin-top: 1rem;
+}
+
+.people-section {
+  margin-bottom: 2rem;
+}
+
+.people-section-heading {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.people-section-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.people-item {
+  padding: 0.5rem 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.people-item:first-of-type {
+  border-top: none;
+}
+
+.people-item-name {
+  font-weight: 600;
+}
+
+.people-item-field {
+  font-size: 0.9rem;
+  color: var(--adb-text);
+}
+
+@media (max-width: 600px) {
+  .people-page {
+    max-width: 100%;
+  }
+
+  .people-alpha-nav {
+    gap: 0.35rem;
+  }
+
+  .people-alpha-link {
+    font-size: 0.8rem;
+  }
+}
+
