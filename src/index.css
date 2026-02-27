@@ -1,20 +1,18 @@
-/* ERDI Data Portal - ADB theme */
+/* ERDI Data Portal - ADB-inspired theme */
 :root {
-  --adb-blue: #002569;
-  --adb-blue-hero: #1e4a7a;
-  --adb-blue-light: #405C8F;
-  --adb-blue-lighter: #8092B4;
-  --adb-blue-pale: #C0C9DA;
-  --adb-white: #FFFFFF;
-  --adb-text: #1a1a1a;
-  --adb-text-muted: #555;
-  --adb-border: #e0e4e8;
-  --adb-bg: #f5f7fa;
-  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-  color: var(--adb-text);
-  background-color: var(--adb-white);
+  /* Core ADB brand palette (approximate, aligned with adb.org) */
+  --adb-blue: #0056b3;
+  --adb-blue-hero: #003f88;
+  --adb-blue-light: #3c7edc;
+  --adb-blue-lighter: #85a9e6;
+  --adb-blue-pale: #d6e2f3;
+
+  --adb-white: #ffffff;
+  --adb-text: #111827;
+  --adb-text-muted: #6b7280;
+  --adb-border: #e5e7eb;
+  --adb-bg: #f3f4f6;
+
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -34,6 +32,11 @@ body {
   min-width: 320px;
   min-height: 100vh;
   overflow-x: hidden;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--adb-text);
+  background-color: var(--adb-bg);
 }
 
 a {
