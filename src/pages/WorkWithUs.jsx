@@ -40,7 +40,33 @@ export default function WorkWithUs() {
             </li>
           </ul>
         </article>
-
+        <article className="wwu-card">
+          <h2>Consulting Opportunities</h2>
+          <p>
+            Partner with ERDI on short-term consulting assignments supporting data,
+            research, and analytical work across the region.
+          </p>
+          <ul className="wwu-links">
+            <li>
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View current consulting opportunities
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Learn about the consulting process
+              </a>
+            </li>
+          </ul>
+        </article>
         <article className="wwu-card">
           <h2>Visiting Fellowship Program</h2>
           <p>
