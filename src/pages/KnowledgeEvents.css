@@ -1,0 +1,96 @@
+.knowledge-events-page {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 4rem;
+}
+
+.ke-header h1 {
+  font-size: 2.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.ke-header p {
+  max-width: 720px;
+  color: #4b5563;
+}
+
+.ke-grid {
+  margin-top: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.75rem;
+}
+
+.ke-card {
+  position: relative;
+  padding: 1.75rem 1.75rem 2rem;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  color: #0f172a;
+  background: radial-gradient(circle at top left, #eef2ff, #eff6ff 40%, #ffffff 100%);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.18);
+}
+
+.ke-card-content {
+  position: relative;
+  z-index: 1;
+}
+
+.ke-card h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.25rem;
+}
+
+.ke-tagline {
+  font-weight: 600;
+  color: #4f46e5;
+  margin-bottom: 0.75rem;
+}
+
+.ke-description {
+  font-size: 0.9rem;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+.ke-card-accent {
+  position: absolute;
+  inset: 0;
+  opacity: 0.65;
+  background: radial-gradient(circle at 10% -10%, rgba(79, 70, 229, 0.9), transparent 55%),
+    radial-gradient(circle at 90% 110%, rgba(14, 165, 233, 0.8), transparent 60%);
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+.ke-card-seminars .ke-card-accent {
+  background: radial-gradient(circle at 10% -10%, rgba(59, 130, 246, 0.85), transparent 55%),
+    radial-gradient(circle at 90% 110%, rgba(59, 130, 246, 0.9), transparent 60%);
+}
+
+.ke-card-webinars .ke-card-accent {
+  background: radial-gradient(circle at 10% -10%, rgba(236, 72, 153, 0.85), transparent 55%),
+    radial-gradient(circle at 90% 110%, rgba(56, 189, 248, 0.9), transparent 60%);
+}
+
+.ke-card-conferences .ke-card-accent {
+  background: radial-gradient(circle at 10% -10%, rgba(22, 163, 74, 0.85), transparent 55%),
+    radial-gradient(circle at 90% 110%, rgba(96, 165, 250, 0.9), transparent 60%);
+}
+
+@media (max-width: 992px) {
+  .ke-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .knowledge-events-page {
+    padding-top: 2rem;
+  }
+
+  .ke-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+

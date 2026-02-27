@@ -30,7 +30,7 @@ export default function Indicators() {
 
       <div className="indicators-cta">
         <a
-          href="https://adb-demo.webflow.io/indicators"
+          href="https://de.statsuite.dev.adb-aibd.tech/"
           target="_blank"
           rel="noopener noreferrer"
           className="btn btn-primary"

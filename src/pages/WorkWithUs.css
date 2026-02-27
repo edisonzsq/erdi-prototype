@@ -1,0 +1,84 @@
+.work-with-us-page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 4rem;
+}
+
+.wwu-header h1 {
+  font-size: 2.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.wwu-header p {
+  max-width: 640px;
+  color: #4b5563;
+}
+
+.wwu-grid {
+  margin-top: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.75rem;
+}
+
+.wwu-card {
+  padding: 1.75rem 1.75rem 1.5rem;
+  border-radius: 1rem;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+.wwu-card h2 {
+  margin-bottom: 0.5rem;
+}
+
+.wwu-card p {
+  color: #4b5563;
+  margin-bottom: 0.9rem;
+}
+
+.wwu-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.wwu-links a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.wwu-links a:hover {
+  text-decoration: underline;
+}
+
+.wwu-social {
+  margin-top: 2.75rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.wwu-social h2 {
+  margin-bottom: 0.4rem;
+}
+
+.wwu-social p {
+  max-width: 640px;
+  color: #4b5563;
+  margin-bottom: 0.6rem;
+}
+
+@media (max-width: 768px) {
+  .work-with-us-page {
+    padding-top: 2rem;
+  }
+
+  .wwu-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+

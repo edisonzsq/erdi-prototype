@@ -37,7 +37,34 @@ export default function Layout() {
             <span className="nav-toggle-bar" />
             <span className="nav-toggle-bar" />
           </button>
-          <nav className={`main-nav ${menuOpen ? 'nav-open' : ''}`}>
+          <nav className={`main-nav ${menuOpen ? 'nav-open' : ''}`}>            
+            
+            {/* <Link to="/dashboard" className={location.pathname === '/dashboard' ? 'active' : ''} onClick={closeMenu}>Dashboard</Link> */}
+            {/* <Link to="/countries" className={location.pathname.startsWith('/countries') ? 'active' : ''} onClick={closeMenu}>Countries</Link> */}
+            <Link
+              to="/knowledge-products"
+              className={location.pathname === '/knowledge-products' ? 'active' : ''}
+              onClick={closeMenu}
+            >
+              Products
+            </Link>
+            <Link
+              to="/knowledge-events"
+              className={location.pathname === '/knowledge-events' ? 'active' : ''}
+              onClick={closeMenu}
+            >
+              Events
+            </Link>
+            <Link
+              to="/work-with-us"
+              className={location.pathname === '/work-with-us' ? 'active' : ''}
+              onClick={closeMenu}
+            >
+              Work with us
+            </Link>
+            <Link to="/indicators" className={location.pathname === '/indicators' ? 'active' : ''} onClick={closeMenu}>Data</Link>
+            <Link to="/publications" className={location.pathname === '/publications' ? 'active' : ''} onClick={closeMenu}>Publications</Link>
+            <Link to="/about" className={location.pathname === '/about' ? 'active' : ''} onClick={closeMenu}>About Us</Link>         
             <span className="nav-cta">
               <a
                 href="https://de.statsuite.dev.adb-aibd.tech/"
@@ -47,24 +74,10 @@ export default function Layout() {
                 onClick={closeMenu}
               >
                 Data Explorer
-              </a>              
-            </span>
-            <Link to="/" className={location.pathname === '/' ? 'active' : ''} onClick={closeMenu}>Home</Link>
-            <Link to="/indicators" className={location.pathname === '/indicators' ? 'active' : ''} onClick={closeMenu}>Indicators</Link>
-            <Link to="/dashboard" className={location.pathname === '/dashboard' ? 'active' : ''} onClick={closeMenu}>Dashboard</Link>
-            <Link to="/countries" className={location.pathname.startsWith('/countries') ? 'active' : ''} onClick={closeMenu}>Countries</Link>
-            <Link to="/publications" className={location.pathname === '/publications' ? 'active' : ''} onClick={closeMenu}>Publications</Link>
-            <Link to="/about" className={location.pathname === '/about' ? 'active' : ''} onClick={closeMenu}>About Us</Link>
-            <span className="nav-cta">
-              {user ? (
-                <Link to="/workspace" className={`nav-cta-btn nav-cta-primary ${location.pathname.startsWith('/workspace') ? 'active' : ''}`} onClick={closeMenu}>
+              </a>    
+              <Link to="/login" className="nav-cta-btn nav-cta-primary" onClick={closeMenu}>
                   Workspace
-                </Link>
-              ) : (
-                <Link to="/login" className="nav-cta-btn nav-cta-primary" onClick={closeMenu}>
-                  Login to Workspace
-                </Link>
-              )}
+              </Link>
             </span>
             {user && (
               <span className="user-menu">

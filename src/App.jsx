@@ -6,12 +6,15 @@ import Landing from './pages/Landing';
 import Publications from './pages/Publications';
 import PublicationDetail from './pages/PublicationDetail';
 import AboutUs from './pages/AboutUs';
-import Dashboard from './pages/Dashboard';
+// import Dashboard from './pages/Dashboard';
 import Indicators from './pages/Indicators';
-import Countries from './pages/Countries';
-import CountryOutlook from './pages/CountryOutlook';
+// import Countries from './pages/Countries';
+// import CountryOutlook from './pages/CountryOutlook';
 import Login from './pages/Login';
 import WorkspaceSpace from './pages/WorkspaceSpace';
+import KnowledgeProducts from './pages/KnowledgeProducts';
+import KnowledgeEvents from './pages/KnowledgeEvents';
+import WorkWithUs from './pages/WorkWithUs';
 import './App.css';
 
 function ProtectedWorkspace({ children }) {
@@ -33,10 +36,13 @@ export default function App() {
             <Route index element={<Landing />} />
             <Route path="publications" element={<Publications />} />
             <Route path="publications/:slug" element={<PublicationDetail />} />
-            <Route path="dashboard" element={<Dashboard />} />
+            {/* <Route path="dashboard" element={<Dashboard />} /> */}
             <Route path="indicators" element={<Indicators />} />
-            <Route path="countries" element={<Countries />} />
-            <Route path="countries/:slug" element={<CountryOutlook />} />
+            {/* <Route path="countries" element={<Countries />} /> */}
+            {/* <Route path="countries/:slug" element={<CountryOutlook />} /> */}
+            <Route path="knowledge-products" element={<KnowledgeProducts />} />
+            <Route path="knowledge-events" element={<KnowledgeEvents />} />
+            <Route path="work-with-us" element={<WorkWithUs />} />
             <Route path="about" element={<AboutUs />} />
             <Route path="login" element={<Login />} />
             <Route

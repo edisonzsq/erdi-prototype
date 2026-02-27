@@ -142,7 +142,7 @@ export default function Landing() {
           View the full set of data indicators with filters by theme—Technology, SDGs, Environment, Energy, Transport, Tourism, and more.
         </p>
         <a
-          href="https://adb-demo.webflow.io/indicators"
+          href="https://de.statsuite.dev.adb-aibd.tech/"
           target="_blank"
           rel="noopener noreferrer"
           className="btn btn-secondary"
