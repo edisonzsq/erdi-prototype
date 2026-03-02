@@ -9,10 +9,10 @@
 .site-header {
   position: relative;
   z-index: 100;
-  background: var(--adb-white);
-  color: var(--adb-text);
-  border-bottom: 1px solid var(--adb-border);
-  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
+  background: #282a2e;        /* dark charcoal from image */
+  color: #e5e7eb;             /* light gray text */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.06);
 }
 
 .header-inner {
@@ -50,27 +50,22 @@
 
 .logo {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 0.5rem;
-  color: var(--adb-blue);
+  color: #e5e7eb;
   text-decoration: none;
-  font-weight: 700;
 }
 
 .logo:hover {
-  color: var(--adb-blue-pale);
+  opacity: 0.9;
   text-decoration: none;
 }
 
-.logo-adb {
-  font-size: 1.25rem;
-  letter-spacing: 0.05em;
-}
-
-.logo-erdi {
-  font-size: 0.95rem;
-  font-weight: 600;
-  opacity: 0.95;
+.logo-img {
+  height: 48px;   /* was 36px */
+  width: auto;
+  display: block;
+  object-fit: contain;
 }
 
 .main-nav {
@@ -80,7 +75,7 @@
 }
 
 .main-nav a {
-  color: var(--adb-blue-hero);
+  color: #e5e7eb;
   text-decoration: none;
   font-weight: 500;
   padding: 0.35em 0;
@@ -88,13 +83,12 @@
 }
 
 .main-nav a:hover {
-  color: var(--adb-blue);
-  text-decoration: none;
+  color: #ffffff;
 }
 
 .main-nav a.active {
-  color: var(--adb-blue);
-  border-bottom-color: var(--adb-blue);
+  color: #ffffff;
+  border-bottom-color: rgba(255, 255, 255, 0.8);
 }
 
 .nav-cta {
@@ -120,15 +114,15 @@
 }
 
 .nav-cta-primary {
-  background: var(--adb-blue) !important;
-  color: var(--adb-white) !important;
-  border-color: var(--adb-blue) !important;
+  background: #ffffff !important;
+  color: #282a2e !important;
+  border-color: #ffffff !important;
 }
 
 .nav-cta-primary:hover {
-  background: var(--adb-blue-light) !important;
-  color: var(--adb-white) !important;
-  border-color: var(--adb-blue-light) !important;
+  background: #f3f4f6 !important;
+  color: #282a2e !important;
+  border-color: #f3f4f6 !important;
 }
 
 .nav-cta-primary.active {
@@ -165,8 +159,13 @@
 /* Mobile nav */
 @media (max-width: 768px) {
   .nav-toggle {
-    display: flex;
-    margin-left: auto;
+    /* existing layout */
+    color: #e5e7eb;
+  }
+  
+  .nav-toggle:hover,
+  .nav-toggle[aria-expanded="true"] {
+    color: #ffffff;
   }
 
   .main-nav {
@@ -212,8 +211,12 @@
     align-items: stretch;
   }
 
+  .main-nav a {
+    color: #e5e7eb;
+  }
+
   .main-nav a.active {
-    border-bottom: 2px solid var(--adb-blue);
+    border-bottom: 2px solid #e5e7eb;
   }
 }
 

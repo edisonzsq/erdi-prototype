@@ -23,8 +23,11 @@ export default function Layout() {
       <header className="site-header">
         <div className="header-inner">
           <Link to="/" className="logo" onClick={closeMenu}>
-            <span className="logo-adb">ADB</span>
-            <span className="logo-erdi">ERDI Data Portal</span>
+          <img
+            src="https://de.statsuite.dev.adb-aibd.tech/assets/ADB/adb-logo-2.svg"
+            alt="Asian Development Bank"
+            className="logo-img"
+          />
           </Link>
           <button
             type="button"
@@ -54,25 +57,24 @@ export default function Layout() {
               onClick={closeMenu}
             >
               Events
-            </Link>
-            <Link
-              to="/work-with-us"
-              className={location.pathname === '/work-with-us' ? 'active' : ''}
-              onClick={closeMenu}
-            >
-              Work with us
-            </Link>
-            <Link to="/indicators" className={location.pathname === '/indicators' ? 'active' : ''} onClick={closeMenu}>Data</Link>
-            <Link to="/publications" className={location.pathname === '/publications' ? 'active' : ''} onClick={closeMenu}>Publications</Link>
+            </Link>            
+            <Link to="/indicators" className={location.pathname === '/indicators' ? 'active' : ''} onClick={closeMenu}>Data</Link>            
             <Link
               to="/people"
               className={location.pathname === '/people' ? 'active' : ''}
               onClick={closeMenu}
             >
               People
-            </Link>         
+            </Link>       
+            <Link
+              to="/work-with-us"
+              className={location.pathname === '/work-with-us' ? 'active' : ''}
+              onClick={closeMenu}
+            >
+              Work with us
+            </Link>  
             <span className="nav-cta">
-              <a
+              {/*<a
                 href="https://de.statsuite.dev.adb-aibd.tech/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -80,11 +82,12 @@ export default function Layout() {
                 onClick={closeMenu}
               >
                 Data Explorer
-              </a>    
+              </a>  
+              */}  
               <Link to="/login" className="nav-cta-btn nav-cta-primary" onClick={closeMenu}>
                   Workspace
               </Link>
-            </span>
+            </span> 
             {user && (
               <span className="user-menu">
                 <span className="user-name">{user.email}</span>
