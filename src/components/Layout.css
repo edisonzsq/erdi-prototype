@@ -62,7 +62,7 @@
 }
 
 .logo-img {
-  height: 48px;   /* was 36px */
+  height: 36px;   /* was 36px */
   width: auto;
   display: block;
   object-fit: contain;

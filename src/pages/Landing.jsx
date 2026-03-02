@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { getFeaturedPublications } from '../data/publications';
+import { getFeaturedKnowledgeProducts } from '../data/knowledgeProducts';
 import './Landing.css';
 
 export default function Landing() {
@@ -8,39 +8,39 @@ export default function Landing() {
       <section className="hero-featured">
         <div className="hero-featured-main">
           <div className="hero-featured-content">
-            <span className="hero-featured-category">ADB COUNTRY OUTLOOK: PHILIPPINES 2025</span>
+            <span className="hero-featured-category">ECONOMIC FORECASTS: CAUCASUS AND CENTRAL ASIA</span>
             <h2 className="hero-featured-title">
-              Philippines: Strengthening competition and increasing formal employment to boost growth trajectory
+              Caucasus and Central Asia: Growth revised upward to 5.8% in 2025
             </h2>
             <p className="hero-featured-summary">
-              The Philippines has been one of Asia and the Pacific&apos;s fastest-growing economies over the past 15 years. The ADB Country Outlook for the Philippines forecasts that GDP will grow at 5.8% in 2026 and 6.0% in 2027, up from 5.7% in 2025, supported by services, construction, and public investment.
+              The growth forecast for Caucasus and Central Asia is revised upward to 5.8% for 2025 and 5.0% for 2026, from the September ADO projections of 5.5% and 4.9%. The upgrade is driven by stronger-than-expected activity in Kazakhstan. Across most of the subregion, growth surprised on the upside in the third quarter of 2025, underpinned by public investment, rising remittances, robust domestic demand, and stable macroeconomic conditions. Subregional inflation projections are raised to 8.0% for 2025 and 7.1% for 2026.
             </p>
-            <Link to="/publications/philippines-outlook-2025" className="hero-featured-cta">
+            <Link to="/knowledge-products" className="hero-featured-cta">
               Read the report
               <span className="hero-featured-cta-arrow">→</span>
             </Link>
-            <span className="hero-featured-meta">Report • 12 February 2025</span>
+            <span className="hero-featured-meta">Report • December 2025</span>
           </div>
           <div className="hero-featured-image" aria-hidden="true" />
         </div>
-        <div className="hero-top-stories">
-          <div className="top-stories-header">
-            <h3 className="top-stories-title">Top stories</h3>
-            <Link to="/publications" className="top-stories-viewall">
-              View all publications →
+        <div className="hero-featured-kp">
+          <div className="featured-kp-header">
+            <h3 className="featured-kp-title">From Knowledge Products</h3>
+            <Link to="/knowledge-products" className="featured-kp-viewall">
+              View all products →
             </Link>
           </div>
-          <ul className="top-stories-list">
-            {getFeaturedPublications(3).map((pub) => (
-              <li key={pub.id}>
-                <Link to={`/publications/${pub.slug}`} className="top-story-item">
+          <ul className="featured-kp-list">
+            {getFeaturedKnowledgeProducts(3).map((item) => (
+              <li key={item.id}>
+                <Link to="/knowledge-products" className="featured-kp-item">
                   <div
-                    className="top-story-image"
+                    className="featured-kp-image"
                     style={{ background: `linear-gradient(135deg, var(--adb-blue) 0%, var(--adb-blue-light) 100%)` }}
                   />
-                  <div className="top-story-content">
-                    <span className="top-story-category">{pub.category}</span>
-                    <span className="top-story-title">{pub.title}</span>
+                  <div className="featured-kp-content">
+                    <span className="featured-kp-meta">Published {item.date}</span>
+                    <span className="featured-kp-item-title">{item.title}</span>
                   </div>
                 </Link>
               </li>
