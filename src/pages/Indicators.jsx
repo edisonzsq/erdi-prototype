@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import './Indicators.css';
 
 const INDICATOR_CATEGORIES = [
@@ -13,18 +12,19 @@ const INDICATOR_CATEGORIES = [
 export default function Indicators() {
   return (
     <div className="indicators-page">
-      <h1>Indicators</h1>
+      <h1>Data Explorer</h1>
       <p className="indicators-intro">
-        Key data and interactive charts across a wide range of topics for ADB&apos;s 49 member economies. Browse indicators by category or explore the Dashboard for visualizations.
+        The Data Explorer gives you access to macroeconomic and socioeconomic data for evidence-based policy and research. In the Data Explorer you will be viewing data sources collected and maintained across the ERDI department—covering ADB&apos;s member economies and a wide range of indicators, from national accounts and prices to trade, population, and more.
       </p>
 
+      <h2 className="indicators-section-title">What you&apos;ll find</h2>
       <div className="indicators-grid">
         {INDICATOR_CATEGORIES.map((cat) => (
-          <Link key={cat.id} to={`/dashboard#${cat.id}`} className="indicator-category-card">
+          <div key={cat.id} className="indicator-category-card">
             <span className="indicator-category-icon">{cat.icon}</span>
             <h3>{cat.name}</h3>
             <p>{cat.desc}</p>
-          </Link>
+          </div>
         ))}
       </div>
 
@@ -35,7 +35,7 @@ export default function Indicators() {
           rel="noopener noreferrer"
           className="btn btn-primary"
         >
-          More Indicators →
+          Go to Data Explorer →
         </a>
       </div>
     </div>

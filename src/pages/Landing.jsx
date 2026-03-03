@@ -51,8 +51,7 @@ export default function Landing() {
 
       <section className="data-insights">
         <div className="data-insights-header">
-          <h2>Data insights</h2>
-          <Link to="/dashboard" className="data-insights-explore">Explore all data insights →</Link>
+          <h2>Data insights</h2>          
         </div>
         <div className="data-insights-content">
           <div className="data-insights-chart">
@@ -102,7 +101,7 @@ export default function Landing() {
             <p>
               Food inflation moderated in some economies but remained elevated in others. In the Philippines, inflation eased within the central bank&apos;s target band. India and Indonesia saw mixed contributions from food and energy, with core inflation driving overall rates.
             </p>
-            <Link to="/publications/intro-cpi-inflation" className="data-insights-cta">Read the statistical release →</Link>
+            <Link to="/knowledge-products" className="data-insights-cta">Read the statistical release →</Link>
           </div>
         </div>
       </section>
@@ -147,7 +146,7 @@ export default function Landing() {
           rel="noopener noreferrer"
           className="btn btn-secondary"
         >
-          View indicators catalog →
+          Go to Data Explorer →
         </a>
       </section>
 
