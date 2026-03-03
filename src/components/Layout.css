@@ -159,10 +159,11 @@
 /* Mobile nav */
 @media (max-width: 768px) {
   .nav-toggle {
-    /* existing layout */
+    display: flex;
+    margin-left: auto;
     color: #e5e7eb;
   }
-  
+
   .nav-toggle:hover,
   .nav-toggle[aria-expanded="true"] {
     color: #ffffff;
@@ -175,13 +176,14 @@
     right: 0;
     flex-direction: column;
     align-items: stretch;
-    background: var(--adb-white);
-    padding: 1rem;
+    background: #1f2937;
+    padding: 0;
     gap: 0;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   }
 
   .main-nav.nav-open {
@@ -192,11 +194,11 @@
   .main-nav > a,
   .main-nav .nav-cta,
   .main-nav .user-menu {
-    padding: 0.75rem 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 0.875rem 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     margin-left: 0;
     margin-right: 0;
-    padding-left: 0;
+    padding-left: 1.5rem;
     border-left: none;
   }
 
@@ -204,6 +206,11 @@
     flex-direction: column;
     align-items: stretch;
     gap: 0.5rem;
+  }
+
+  .main-nav .nav-cta .nav-cta-btn,
+  .main-nav .nav-cta .nav-cta-primary {
+    justify-content: center;
   }
 
   .main-nav .user-menu {
@@ -215,8 +222,36 @@
     color: #e5e7eb;
   }
 
+  .main-nav a:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.06);
+  }
+
   .main-nav a.active {
-    border-bottom: 2px solid #e5e7eb;
+    color: #ffffff;
+    border-bottom-color: rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.04);
+  }
+
+  .main-nav .nav-cta-primary {
+    background: #ffffff !important;
+    color: #1f2937 !important;
+    border-color: #ffffff !important;
+  }
+
+  .main-nav .user-name {
+    color: #e5e7eb;
+  }
+
+  .main-nav .btn-logout {
+    color: #e5e7eb;
+    border-color: rgba(255, 255, 255, 0.25);
+  }
+
+  .main-nav .btn-logout:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.4);
+    color: #ffffff;
   }
 }
 
