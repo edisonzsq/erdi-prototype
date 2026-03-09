@@ -35,9 +35,11 @@
   margin-bottom: 0.4rem;
 }
 
-.kp-section-description {
+.kp-section-description,
+.kp-section-count {
   color: #4b5563;
   margin-bottom: 1rem;
+  font-size: 0.95rem;
 }
 
 .kp-section-preview {
@@ -68,6 +70,11 @@
   color: #6b7280;
 }
 
+.kp-preview-team {
+  color: #6b7280;
+  font-size: 0.85rem;
+}
+
 .kp-preview-summary {
   margin-top: 0.4rem;
   font-size: 0.9rem;
@@ -87,9 +94,11 @@
   margin-bottom: 0.25rem;
 }
 
-.kp-list-header p {
+.kp-list-header p,
+.kp-list-header .kp-section-count {
   max-width: 720px;
   color: #4b5563;
+  margin-bottom: 0;
 }
 
 .kp-list {
@@ -113,7 +122,13 @@
 }
 
 .kp-list-item-main h3 {
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.25rem;
+}
+
+.kp-list-team {
+  font-size: 0.9rem;
+  color: #4b5563;
+  margin-bottom: 0.25rem;
 }
 
 .kp-list-meta {
@@ -122,13 +137,43 @@
   margin-bottom: 0.4rem;
 }
 
-.kp-list-summary {
-  font-size: 0.9rem;
-  color: #4b5563;
-}
-
 .kp-list-item-actions {
   flex-shrink: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.kp-list-item-actions .btn {
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.kp-list-item-actions .btn-primary {
+  background: #4f46e5;
+  color: #fff;
+  border-color: #4f46e5;
+}
+
+.kp-list-item-actions .btn-primary:hover {
+  background: #4338ca;
+  border-color: #4338ca;
+}
+
+.kp-list-item-actions .btn-secondary {
+  background: #fff;
+  color: #374151;
+  border-color: #d1d5db;
+}
+
+.kp-list-item-actions .btn-secondary:hover {
+  background: #f9fafb;
+  border-color: #9ca3af;
 }
 
 .kp-pagination {
@@ -138,6 +183,25 @@
   gap: 1rem;
   margin-top: 1.5rem;
   font-size: 0.9rem;
+}
+
+.kp-pagination .btn-link {
+  background: none;
+  border: none;
+  color: #4f46e5;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: inherit;
+}
+
+.kp-pagination .btn-link:hover:not(:disabled) {
+  color: #4338ca;
+}
+
+.kp-pagination .btn-link:disabled {
+  color: #9ca3af;
+  cursor: not-allowed;
+  text-decoration: none;
 }
 
 .kp-page-indicator {
@@ -158,8 +222,11 @@
     align-items: stretch;
   }
 
+  .kp-list-item-actions {
+    justify-content: flex-start;
+  }
+
   .kp-pagination {
     justify-content: center;
   }
 }
-
